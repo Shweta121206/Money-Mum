@@ -11,15 +11,25 @@ export default function HomeScreen() {
   }, []);
 
   return (
-    <View className="flex-1 items-center justify-start pt-12 bg-gray-50 dark:bg-slate-900">
-      <View className="w-full px-6 mb-6">
-        <Text className="text-2xl font-bold text-gray-900 dark:text-white">Home Dashboard</Text>
-        <Text className="text-lg text-gray-600 dark:text-gray-400">Welcome to Money Mum!</Text>
+    <View className="flex-1 bg-slate-50 dark:bg-slate-950">
+      {/* Header Section */}
+      <View className="bg-primary-500 pt-16 pb-8 px-6 rounded-b-[32px] shadow-lg">
+        <Text className="text-primary-100 text-sm font-medium mb-1">Welcome back,</Text>
+        <Text className="text-3xl font-extrabold text-white">Money Mum</Text>
       </View>
 
-      <TipCard tip={dailyTip} />
+      <View className="flex-1 px-6 -mt-6">
+        {/* Daily Tip Section */}
+        <TipCard tip={dailyTip} />
 
-      <View className="my-8 h-px w-4/5 bg-gray-300 dark:bg-gray-700" />
+        {/* Dashboard Placeholder */}
+        <View className="mt-6">
+          <Text className="text-lg font-bold text-slate-800 dark:text-white mb-3">Your Overview</Text>
+          <View className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 items-center">
+            <Text className="text-slate-400 dark:text-slate-500">Charts coming soon...</Text>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }

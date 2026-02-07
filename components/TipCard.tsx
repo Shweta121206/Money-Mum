@@ -7,19 +7,21 @@ interface TipCardProps {
 
 export default function TipCard({ tip }: TipCardProps) {
     return (
-        <View className="bg-emerald-100 dark:bg-emerald-900 p-4 rounded-xl shadow-sm my-4 w-11/12">
-            <View className="flex-row justify-between items-center mb-2">
-                <Text className="text-xs font-bold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider">
+        <View className="bg-white dark:bg-slate-800 p-5 rounded-2xl shadow-md my-4 w-full border-l-4 border-secondary-400">
+            <View className="flex-row justify-between items-center mb-3">
+                <Text className="text-xs font-bold text-primary-600 dark:text-primary-300 uppercase tracking-widest">
                     Daily Tip
                 </Text>
-                <Text className="text-xs text-emerald-600 dark:text-emerald-400 bg-emerald-200 dark:bg-emerald-800 px-2 py-0.5 rounded-full">
-                    {tip.category}
-                </Text>
+                <View className="bg-primary-50 dark:bg-primary-900 px-3 py-1 rounded-full">
+                    <Text className="text-xs font-semibold text-primary-700 dark:text-primary-200">
+                        {tip.category}
+                    </Text>
+                </View>
             </View>
-            <Text className="text-lg font-bold text-emerald-900 dark:text-emerald-50 mb-1">
+            <Text className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">
                 {tip.title}
             </Text>
-            <Text className="text-emerald-800 dark:text-emerald-200 leading-5">
+            <Text className="text-slate-600 dark:text-slate-300 leading-6 text-base">
                 {tip.description}
             </Text>
         </View>
