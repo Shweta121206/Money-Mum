@@ -1,10 +1,13 @@
-import { Text, View } from 'react-native';
+// Budget screen component
+import React from 'react';
 
-export default function BudgetScreen() {
+const Budget = () => {
     return (
-        <View className="flex-1 items-center justify-center bg-white">
-            <Text className="text-xl font-bold">Budget</Text>
-            <Text className="text-gray-500 mt-2">Manage your budget here</Text>
-        </View>
+        <div>
+            <h1>Budget Screen</h1>
+            {/* Budget related content goes here */}
+        </div>
     );
-}
+};
+
+export default Budget;
