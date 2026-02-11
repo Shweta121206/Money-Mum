@@ -1,24 +1,18 @@
 import React from 'react';
-import { Tab, Tabs } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './HomeScreen'; // Adjust import according to your file structure
+import SettingsScreen from './SettingsScreen'; // Adjust import according to your file structure
 
-const Layout = () => {
-  return (
-    <div>
-      <h1>My Money Mum App</h1>
-      <Tabs>
-        <Tab title="Home">
-          <h2>Home Content</h2>
-        </Tab>
-        <Tab title="Transactions">
-          <h2>Transactions Content</h2>
-        </Tab>
-        <Tab title="Settings">
-          <h2>Settings Content</h2>
-        </Tab>
-      </Tabs>
-    </div>
-  );
-};
+const Tab = createBottomTabNavigator();
 
-export default Layout;
+export default function App() {
+    return (
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen name="Home" component={HomeScreen} />
+                <Tab.Screen name="Settings" component={SettingsScreen} />
+            </Tab.Navigator>
+        </NavigationContainer>
+    );
+}
